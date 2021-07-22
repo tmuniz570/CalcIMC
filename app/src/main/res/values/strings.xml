@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IMC Calc</string>
+    <string name="TitleView">Calculadora IMC</string>
+    <string name="digitePeso">Digite o peso em KG (ex.: 65,4)</string>
+    <string name="digiteAltura">Digite a altura em metros (ex.: 1,68)</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Seu IMC é: </string>
+
+</resources>
