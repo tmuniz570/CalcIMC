@@ -3,7 +3,7 @@
 
     <style name="et_style">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_marginHorizontal">64dp</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:inputType">numberDecimal</item>
