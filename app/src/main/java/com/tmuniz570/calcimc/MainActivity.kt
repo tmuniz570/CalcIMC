@@ -3,6 +3,7 @@ package com.tmuniz570.calcimc
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.widget.doOnTextChanged
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.pow
@@ -33,18 +34,23 @@ class MainActivity : AppCompatActivity() {
             when{
                 imc < 18.5 -> {
                     tv_result.text = "Seu IMC é: %.2f Kg/m²\n\nClassificado como MAGREZA\n\nGrau de obesidade: 0\n\nSeu peso ideal seria entre %.2f Kg e %.2f Kg".format(imc, pesoMin, pesoMax)
+                    tv_result.setTextColor(ContextCompat.getColor(this, R.color.magro))
                 }
                 imc >= 18.5 && imc < 25 -> {
                     tv_result.text = "Seu IMC é: %.2f Kg/m²\n\nClassificado como NORMAL\n\nGrau de obesidade: 0\n\nSeu peso ideal é entre %.2f Kg e %.2f Kg".format(imc, pesoMin, pesoMax)
+                    tv_result.setTextColor(ContextCompat.getColor(this, R.color.normal))
                 }
                 imc >= 25 && imc < 30 -> {
                     tv_result.text = "Seu IMC é: %.2f Kg/m²\n\nClassificado como SOBREPESO\n\nGrau de obesidade: 1\n\nSeu peso ideal seria entre %.2f Kg e %.2f Kg".format(imc, pesoMin, pesoMax)
+                    tv_result.setTextColor(ContextCompat.getColor(this, R.color.sobrepeso))
                 }
                 imc >= 30 && imc < 40 -> {
                     tv_result.text = "Seu IMC é: %.2f Kg/m²\n\nClassificado como OBESIDADE\n\nGrau de obesidade: 2\n\nSeu peso ideal seria entre %.2f Kg e %.2f Kg".format(imc, pesoMin, pesoMax)
+                    tv_result.setTextColor(ContextCompat.getColor(this, R.color.obesidade))
                 }
                 imc >= 40 -> {
                     tv_result.text = "Seu IMC é: %.2f Kg/m²\n\nClassificado como OBESIDADE GRAVE\n\nGrau de obesidade: 3\n\nSeu peso ideal seria entre %.2f Kg e %.2f Kg".format(imc, pesoMin, pesoMax)
+                    tv_result.setTextColor(ContextCompat.getColor(this, R.color.obesidadegrave))
                 }
             }
             tv_result.visibility = View.VISIBLE
